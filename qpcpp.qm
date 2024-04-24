@@ -3929,7 +3929,7 @@ fb-&gt;m_next_dis = static_cast&lt;std::uintptr_t&gt;(
 #endif
 
 // set as new head of the free list
-m_free_head = static_cast&lt;QFreeBlock *&gt;(block);
+m_free_head = fb;
 
 m_nFree = m_nFree + 1U; // one more free block in this pool
 
@@ -8454,11 +8454,11 @@ if (QS_GLB_CHECK_(rec_) &amp;&amp; QS_LOC_CHECK_(qsId_)) { \
 #define QP_HPP_
 
 //============================================================================
-#define QP_VERSION     733U
-#define QP_VERSION_STR &quot;7.3.3&quot;
+#define QP_VERSION     734U
+#define QP_VERSION_STR &quot;7.3.4&quot;
 
-//! Encrypted  current QP release (7.3.3) and date (2024-03-01)
-#define QP_RELEASE     0x70C4F752U
+//! Encrypted  current QP release (7.3.4) and date (2024-03-21)
+#define QP_RELEASE     0x70C1EA11U
 
 //============================================================================
 //! @cond INTERNAL

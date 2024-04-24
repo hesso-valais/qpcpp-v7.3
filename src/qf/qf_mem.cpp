@@ -230,7 +230,7 @@ void QMPool::put(
     #endif
 
     // set as new head of the free list
-    m_free_head = static_cast<QFreeBlock *>(block);
+    m_free_head = fb;
 
     m_nFree = m_nFree + 1U; // one more free block in this pool
 
